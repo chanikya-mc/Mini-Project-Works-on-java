@@ -1,0 +1,131 @@
+coding:
+import java.util.*;
+class Project
+{ Scanner sc=new Scanner(System.in);
+    String name,result,result2,result1,result4,result3;
+    
+    int stdroll,mpython,mjava,mc,memtl,mdsp,total;
+    float per,percentage;
+    //Student detail enter
+    public void detail()
+    {  System.out.println("");
+        System.out.println("Enter the Student Name");
+        String name=sc.next();
+        System.out.println("Enter the Roll Number");
+         stdroll=sc.nextInt();
+         System.out.println("Enter marks in PYTHON");
+          mpython=sc.nextInt();
+          if(mpython>=35&&mpython<100)
+        {
+            result="pass";
+        }
+        else
+        {
+            result="Fail";
+        }
+         System.out.println("Enter marks in JAVA");
+          mjava=sc.nextInt();
+          if(mjava>=35&&mjava<100)
+        {
+            result1="pass";
+        }
+        else
+        {
+            result1="Fail";
+        }
+         System.out.println("Enter marks in C");
+          mc=sc.nextInt();
+          if(mc>=35&&mc<100)
+        {
+            result2="pass";
+        }
+        else
+        {
+            result2="Fail";
+        }
+         System.out.println("Enter marks in EMTL");
+          memtl=sc.nextInt();
+          if(memtl>=35&&memtl<100)
+        {
+            result3="pass";
+        }
+        else
+        {
+            result3="Fail";
+        }
+         System.out.println("Enter marks in DSP");
+          mdsp=sc.nextInt();
+          if(mdsp>=35&&mdsp<100)
+        {
+            result4="pass";
+        }
+        else
+        {
+            result4="Fail";
+        }
+         
+    }
+    public void cal()
+    {
+        total=mpython+mjava+mc+memtl+mdsp;
+         per=total;
+         percentage=(per/500)*100;
+       
+        
+        
+        
+        
+    }
+    public void show()
+    {
+        System.out.println("Stundent Name: "+name);
+        System.out.println("Student Roll Number: "+stdroll);
+        System.out.println("");
+        System.out.print("SUBJECT NAME\t\t\tMARKS\t\t\t TOTAL\t\t RESULT\n");
+        System.out.printf("Python\t\t\t\t%d\t\t\t100\t\t%s\n",mpython,result);
+         System.out.printf("Java\t\t\t\t%d\t\t\t100\t\t%s\n",mjava,result1);
+          System.out.printf("C\t\t\t\t%d\t\t\t100\t\t%s\n",mc,result2);
+           System.out.printf("EMTL\t\t\t\t%d\t\t\t100\t\t%s\n",memtl,result3);
+            System.out.printf("DSP\t\t\t\t%d\t\t\t100\t\t%s\n",mdsp,result4);
+            System.out.println(" ");
+            System.out.printf("Total:\t\t\t\t%d\n",total);
+            System.out.println("Percentage:\t\t\t"+percentage);
+            System.out.println("");
+           
+           
+    }
+    public void resultview()
+    {
+        int input=sc.nextInt();
+        if(stdroll==input)
+         show();
+         else
+         System.out.println("No result found\n Enter correct Roll number");
+    }
+}
+public class Project3
+{
+    public static void main(String[] args)
+    {   
+        Scanner sc1=new Scanner(System.in);
+        System.out.println("\t\t\t𝒲𝑒𝓁𝒸𝑜𝓂𝑒 𝒯𝑜 𝑀𝒯𝐼𝐸𝒯   𝑅𝑒𝓈𝓊𝓁𝓉𝓈");System.out.println("Enter Number of Records to Enter");
+        int n=sc1.nextInt();
+        Project p=new Project();
+        for(int i=1;i<=n;i++)
+        {
+        
+        p.detail();
+        p.cal();
+        p.show();
+        }
+        System.out.println("⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙⸙");
+        System.out.println("To view your Result Enter the Roll number to view Result");
+            p.resultview();
+        System.out.println("\t\t𝕋𝕙𝕒𝕟𝕜𝕤 𝕗𝕠𝕣 𝕧𝕚𝕤𝕚𝕥𝕚𝕟𝕘");
+        
+        
+        
+        
+    
+    }
+}
